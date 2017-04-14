@@ -19,9 +19,9 @@ class User extends Model
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      * each user has One address not more
      */
-    public function address()
+    public function country()
     {
-        return $this->hasOne('App\Model\Address');
+        return $this->hasOne('App\Model\Country');
     }
 
     /**

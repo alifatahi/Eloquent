@@ -1,6 +1,6 @@
 <h1>{{$user->username}} 's Profile</h1>
     <p>
-        <strong>Country:</strong> {{$user->address->country}}
+        <strong>Country:</strong> {{$user->country->name}}
     </p>
 
     <p>

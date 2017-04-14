@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Country;
 use App\Model\Post;
 use Illuminate\Http\Request;
 use App\Model\User;
@@ -27,5 +28,13 @@ class PostController extends Controller
     {
         $user = User::where('username',$username)->firstOrFail();
         return view('profile',['user' => $user]);
+   }
+
+
+    public function getCountry($countryId)
+    {
+        $country =  Country::findOrFail($countryId);
+
+        return view('country',['country' => $country]);
    }
 }
