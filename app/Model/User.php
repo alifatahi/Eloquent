@@ -32,4 +32,9 @@ class User extends Model
     {
         return $this->belongsToMany('App\Model\Role');
     }
+
+    public function comments()
+    {
+        return $this->morphMany('App\Model\Comment','commentable');
+    }
 }

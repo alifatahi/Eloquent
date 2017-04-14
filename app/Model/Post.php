@@ -14,4 +14,10 @@ class Post extends Model
     {
         return $this->belongsTo('App\Model\User');
     }
+
+
+    public function comments()
+    {
+        return $this->morphMany('App\Model\Comment','commentable');
+    }
 }

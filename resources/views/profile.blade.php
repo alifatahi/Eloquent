@@ -13,6 +13,13 @@
         @endforeach
         </ul>
     </p>
+
+
+@foreach($user->comments as $comment)
+        {{$comment->body}}
+    @endforeach
+
+
 @foreach($user->post as $posts)
     <h1>{{$posts->title}}</h1>
     <p>{{$posts->body}}</p>
