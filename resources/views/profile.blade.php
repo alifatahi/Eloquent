@@ -1,10 +1,18 @@
 <h1>{{$user->username}} 's Profile</h1>
+    <p>
+        <strong>Country:</strong> {{$user->address->country}}
+    </p>
 
-<p>Lorem ipsum dolor sit amet, consectetur
-    adipisicing elit. Ad adipisci animi aperiam consequuntur ducimus
-    ea facilis, iste itaque maiores, molestiae
-    molestias pariatur perspiciatis quas qui reiciendis sequi sint tempore ullam.</p>
-
+    <p>
+        <strong>Roles:</strong>
+        <ul>
+        @foreach($user->role as $roles)
+            <li>
+            {{$roles->name}}
+            </li>
+        @endforeach
+        </ul>
+    </p>
 @foreach($user->post as $posts)
     <h1>{{$posts->title}}</h1>
     <p>{{$posts->body}}</p>
